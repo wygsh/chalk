@@ -6,19 +6,17 @@ v install wygsh.chalk
 
 ## Example
 
-```go
+```v
 module main
+
 import wygsh.chalk
 
-fn main () {
-	str1 := chalk.color8(
-		'Hello ${chalk.color8('world', .green, .bg)}!!',
-		.blue, .bg
-	)
-	str2 := color8(
-		'MORE ${chalk.rgb('COLORS', [u8(200), 100, 255], .bg)!}!!',
-		.red, .bg
-	)
+const c8 = chalk.color8
+const rgb = chalk.rgb
+
+fn main() {
+	str1 := c8('Hello ${c8('world', .green, .bg)}!!', .blue, .bg)
+	str2 := c8('MORE ${rgb('COLORS', [u8(200), 100, 255], .bg)!}!!', .red, .bg)
 
 	println('${str1}\n${str2}')
 }
