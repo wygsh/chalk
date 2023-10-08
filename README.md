@@ -23,4 +23,4 @@ fn main() {
 ```
 output:
 
-<img src="docs/assets/ex_out.png" alt="preview_output" width="165"/>
+<img src="https://raw.githubusercontent.com/wygsh/chalk/main/docs/assets/ex_out.png" alt="preview_output" width="165"/>
