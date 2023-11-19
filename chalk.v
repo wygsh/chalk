@@ -12,6 +12,11 @@ pub fn style(str string, style graphics.Styles) string {
 	return style_str + util.replace_last(str, chalk.delim, chalk.delim + style_str) + chalk.delim
 }
 
+pub fn color(str string, color graphics.Colors, layer graphics.Layer) string {
+	color_str := graphics.color(color, layer)
+	return color_str + util.replace_last(str, chalk.delim, chalk.delim + color_str) + chalk.delim
+}
+
 pub fn color8(str string, color graphics.Colors8, layer graphics.Layer) string {
 	color_str := graphics.color8(color, layer)
 	return color_str + util.replace_last(str, chalk.delim, chalk.delim + color_str) + chalk.delim
