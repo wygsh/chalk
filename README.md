@@ -9,16 +9,13 @@ v install wygsh.chalk
 ```v
 module main
 
-import wygsh.chalk
-
-const c8 = chalk.color8
-const rgb = chalk.rgb
+import wygsh.chalk { c8, rgb }
 
 fn main() {
-	str1 := c8('Hello ${c8('world', .green, .bg)}!!', .blue, .bg)
-	str2 := c8('MORE ${rgb('COLORS', [u8(200), 100, 255], .bg)!}!!', .red, .bg)
-
-	println('${str1}\n${str2}')
+	println(
+		c8('Hello ${c8('world', .green, .bg)}!!\n', .blue, .bg) +
+		c8('MORE ${rgb('COLORS', 200, 100, 255, .bg)}!!', .red, .bg)
+	)
 }
 ```
 output:
